@@ -16,6 +16,7 @@ const resetBtn = document.querySelector('.reset-btn');
 let winner = '';
 let userScore = 0;
 let computerScore = 0;
+let gameEnded = 0;
 //Event Listeners
 gameArea.addEventListener('click', userMove);
 resetBtn.addEventListener('click', resetGame);
@@ -35,12 +36,15 @@ function randomNum(){
   return rand;
 }
 function userMove(e){
+  gameEnded = 0;
   const section = e.target;
   if(section.classList.contains('section')){
     section.innerHTML = '<img src = "./images/x.png">';
     section.classList.add('filled-section');
-  checkWinner();
-  computerMove();
+    checkWinner();
+    if(gameEnded == 0) {
+      computerMove();
+    }
   }
 }
 
@@ -63,48 +67,56 @@ function checkWinner(){
   //check for user win
   if(section1.innerHTML == '<img src="./images/x.png">' && section2.innerHTML == '<img src="./images/x.png">' && section3.innerHTML == '<img src="./images/x.png">'){
     winner = 'user';
+    endGame();
     section1.classList.add('text-win');
     section2.classList.add('text-win');
     section3.classList.add('text-win');
   }else
   if(section4.innerHTML == '<img src="./images/x.png">' && section5.innerHTML == '<img src="./images/x.png">' && section6.innerHTML == '<img src="./images/x.png">'){
     winner = 'user';
+    endGame();
     section4.classList.add('text-win');
     section5.classList.add('text-win');
     section6.classList.add('text-win');
   }else
   if(section7.innerHTML == '<img src="./images/x.png">' && section8.innerHTML == '<img src="./images/x.png">' && section9.innerHTML == '<img src="./images/x.png">'){
     winner = 'user';
+    endGame();
     section7.classList.add('text-win');
     section8.classList.add('text-win');
     section9.classList.add('text-win');
   }else
   if(section1.innerHTML == '<img src="./images/x.png">' && section4.innerHTML == '<img src="./images/x.png">' && section7.innerHTML == '<img src="./images/x.png">'){
     winner = 'user';
+    endGame();
     section1.classList.add('text-win');
     section4.classList.add('text-win');
     section7.classList.add('text-win');
   }else
   if(section2.innerHTML == '<img src="./images/x.png">' && section5.innerHTML == '<img src="./images/x.png">' && section8.innerHTML == '<img src="./images/x.png">'){
     winner = 'user';
+    endGame();
     section2.classList.add('text-win');
     section5.classList.add('text-win');
     section8.classList.add('text-win');
   }else
   if(section3.innerHTML == '<img src="./images/x.png">' && section6.innerHTML == '<img src="./images/x.png">' && section9.innerHTML == '<img src="./images/x.png">'){
     winner = 'user';
+    endGame();
     section3.classList.add('text-win');
     section6.classList.add('text-win');
     section9.classList.add('text-win');
   }else
   if(section1.innerHTML == '<img src="./images/x.png">' && section5.innerHTML == '<img src="./images/x.png">' && section9.innerHTML == '<img src="./images/x.png">'){
     winner = 'user';
+    endGame();
     section1.classList.add('text-win');
     section5.classList.add('text-win');
     section9.classList.add('text-win');
   }else
   if(section3.innerHTML == '<img src="./images/x.png">' && section5.innerHTML == '<img src="./images/x.png">' && section7.innerHTML == '<img src="./images/x.png">'){
     winner = 'user';
+    endGame();
     section3.classList.add('text-win');
     section5.classList.add('text-win');
     section7.classList.add('text-win');
@@ -112,53 +124,60 @@ function checkWinner(){
   //check for computer win
   if(section1.innerHTML == '<img src="./images/o.png">' && section2.innerHTML == '<img src="./images/o.png">' && section3.innerHTML == '<img src="./images/o.png">'){
     winner = 'computer';
+    endGame();
     section1.classList.add('text-win');
     section2.classList.add('text-win');
     section3.classList.add('text-win');
   }else
   if(section4.innerHTML == '<img src="./images/o.png">' && section5.innerHTML == '<img src="./images/o.png">' && section6.innerHTML == '<img src="./images/o.png">'){
     winner = 'computer';
+    endGame();
     section4.classList.add('text-win');
     section5.classList.add('text-win');
     section6.classList.add('text-win');
   }else
   if(section7.innerHTML == '<img src="./images/o.png">' && section8.innerHTML == '<img src="./images/o.png">' && section9.innerHTML == '<img src="./images/o.png">'){
     winner = 'computer';
+    endGame();
     section7.classList.add('text-win');
     section8.classList.add('text-win');
     section9.classList.add('text-win');
   }else
   if(section1.innerHTML == '<img src="./images/o.png">' && section4.innerHTML == '<img src="./images/o.png">' && section7.innerHTML == '<img src="./images/o.png">'){
     winner = 'computer';
+    endGame();
     section1.classList.add('text-win');
     section4.classList.add('text-win');
     section7.classList.add('text-win');
   }else
   if(section2.innerHTML == '<img src="./images/o.png">' && section5.innerHTML == '<img src="./images/o.png">' && section8.innerHTML == '<img src="./images/o.png">'){
     winner = 'computer';
+    endGame();
     section2.classList.add('text-win');
     section5.classList.add('text-win');
     section8.classList.add('text-win');
   }else
   if(section3.innerHTML == '<img src="./images/o.png">' && section6.innerHTML == '<img src="./images/o.png">' && section9.innerHTML == '<img src="./images/o.png">'){
     winner = 'computer';
+    endGame();
     section3.classList.add('text-win');
     section6.classList.add('text-win');
     section9.classList.add('text-win');
   }else
   if(section1.innerHTML == '<img src="./images/o.png">' && section5.innerHTML == '<img src="./images/o.png">' && section9.innerHTML == '<img src="./images/o.png">'){
     winner = 'computer';
+    endGame();
     section1.classList.add('text-win');
     section5.classList.add('text-win');
     section9.classList.add('text-win');
   }else
   if(section3.innerHTML == '<img src="./images/o.png">' && section5.innerHTML == '<img src="./images/o.png">' && section7.innerHTML == '<img src="./images/o.png">'){
     winner = 'computer';
+    endGame();
     section3.classList.add('text-win');
     section5.classList.add('text-win');
     section7.classList.add('text-win');
   }
-  endGame();
 }
 function endGame(){
   if(winner != ''){
@@ -167,10 +186,11 @@ function endGame(){
     if(winner == 'user'){
       userScore++;
       winner = '';
-    }
-    if(winner == 'computer'){
+      gameEnded = 1;
+    }else if(winner == 'computer'){
       computerScore++;
       winner = '';
+      gameEnded = 1;
     }
   }
   userScoreHolder.innerHTML = userScore;
