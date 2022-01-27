@@ -172,6 +172,9 @@ img{
   .game .section:hover{
     background-color: transparent;
   }
+  .text-win{
+    background-color: crimson;
+  }
   .section1{
     border: 1px solid black;
     border-top: 0;
