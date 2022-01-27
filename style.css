@@ -170,7 +170,7 @@ img{
     height: 50px;
   }
   .game .section:hover{
-    background-color: transparent;
+    background: transparent;
   }
   .text-win{
     background-color: crimson;
