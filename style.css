@@ -162,50 +162,50 @@ img{
     font-size: 18px;
   }
   .game{
-    height: 150px;
-    width: 150px;
+    height: 210px;
+    width: 210px;
   }
   .game .section{
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     -webkit-tap-highlight-color: transparent;
   }
   .section1{
-    border: 1px solid black;
+    border: 2px solid black;
     border-top: 0;
     border-left: 0;
   }
   .section2{
-    border: 1px solid black;
+    border: 2px solid black;
     border-top: 0;
   }
   .section3{
-    border: 1px solid black;
+    border: 2px solid black;
     border-top: 0;
     border-right: 0;
   }
   .section4{
-    border: 1px solid black;
+    border: 2px solid black;
     border-left: 0;
   }
   .section5{
-    border: 1px solid black;
+    border: 2px solid black;
   }
   .section6{
-    border: 1px solid black;
+    border: 2px solid black;
     border-right: 0;
   }
   .section7{
-    border: 1px solid black;
+    border: 2px solid black;
     border-bottom: 0;
     border-left: 0;
   }
   .section8{
-    border: 1px solid black;
+    border: 2px solid black;
     border-bottom: 0;
   }
   .section9{
-    border: 1px solid black;
+    border: 2px solid black;
     border-bottom: 0;
     border-right: 0;
   }
